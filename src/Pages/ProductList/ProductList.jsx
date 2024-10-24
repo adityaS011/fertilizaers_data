@@ -7,7 +7,7 @@ import "ag-grid-community/dist/styles/ag-theme-alpine.css"
 const columns = [
   {
     field: "id",
-    headerName: "ID",
+    headerName:'Filters',
     width: 140,
     sortable: true,
     floatingFilter: true,
@@ -66,15 +66,15 @@ const columns = [
 function ProductList() {
   return (
     <div className="productList">
-      <div>ProductList</div>
+      <div className="productListHeader">Product List</div>
 
       <div className="productListTable">
         <div className="ag-theme-alpine" style={{ width: "100%" }}>
-          <AgGridReact
-            rowData={data}
-            columnHoverHighlight={true}
-            columnDefs={columns}
-          ></AgGridReact>
+        <AgGridReact
+        rowData={data}
+        columnDefs={columns}
+        columnHoverHighlight={true}
+        />
         </div>
       </div>
     </div>

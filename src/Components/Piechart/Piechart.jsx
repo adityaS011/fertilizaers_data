@@ -33,10 +33,30 @@ const renderCustomizedLabel = ({
 
 function Piechart({ data, title, dataKey }) {
   let chartData = getPieData(data, dataKey)
+  console.log(chartData)
   return (
     <div className="piechart">
       <h3 className="piechartTitle">{title}</h3>
-      <PieChart width={500} height={500} aspect={2 / 1}>
+      <ul className="listData">
+
+      {
+          chartData.map((item,index)=>{
+
+              return(
+                  index <5 &&
+                  <li key={index}>
+                    <p>
+                        {item.name}
+                        </p>
+
+
+                  </li>
+
+                )
+            })
+        }
+</ul>
+      <PieChart width={500} height={400} aspect={2 / 1}>
         <Pie
           data={chartData}
           cx={250}

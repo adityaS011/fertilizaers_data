@@ -1,5 +1,4 @@
 .productList {
-
   flex: 4;
 }
 
@@ -31,4 +30,14 @@
 .productListDelete {
   color: red;
   cursor: pointer;
+}
+
+.productListHeader{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-size: x-large;
+    margin-top: 10px;
 }
