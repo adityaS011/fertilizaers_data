@@ -1,6 +1,5 @@
 .sidebar {
-    width: fit-content;
-    min-width: 240px;
+    width: 240px;
     display: flex;
     flex-direction: column;
     position: sticky;
@@ -15,6 +14,7 @@
     padding: 16px 24px;
     color: #444;
   }
+
   .sidebarMenu {
     margin-bottom: 20px;
   }
@@ -25,6 +25,7 @@
     color: #669b52;
     margin-bottom: 8px;
   }
+
   .sidebarList {
     list-style: none;
     padding: 0;
@@ -37,10 +38,14 @@
     align-items: center;
     cursor: pointer;
     border-radius: 8px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: color 0.3s ease;
+    background: none; /* Ensure no background color */
   }
 
-  .sidebarListItem.active,
+  .sidebarListItem.active {
+    color: green; /* Change text color to green when active */
+  }
+
   .sidebarListItem:hover {
     background-color: #d3f3c6;
     color: #333;
@@ -52,20 +57,4 @@
     color: #555;
   }
 
-  @media (max-width: 768px) {
-    .sidebar {
-      width: 100%;
-      height: auto;
-      position: relative;
-      box-shadow: none;
-      border-right: none;
-    }
 
-    .sidebarListItem {
-      justify-content: center;
-    }
-
-    .sidebarIcon {
-      margin-right: 0;
-    }
-  }

@@ -65,11 +65,11 @@ const columns = [
 
 function ProductList() {
   return (
-    <div className="productList">
+    <div className="productList no-scrollbar">
       <div className="productListHeader">Product List</div>
 
       <div className="productListTable">
-        <div className="ag-theme-alpine" style={{ width: "100%" }}>
+        <div className="ag-theme-alpine " style={{ width: "100%" }}>
         <AgGridReact
         rowData={data}
         columnDefs={columns}
